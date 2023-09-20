@@ -10,8 +10,13 @@ font-family: 'Montserrat Alternates', sans-serif;
 /* estilos del nav lateral*/
 #fp-nav ul li a span, .fp-slidesNav ul li a span {
    
-    background:white;
+    background: #92695D;
    
+}
+#fp-nav ul li:hover .fp-tooltip, #fp-nav.fp-show-active a.active + .fp-tooltip {
+   
+    color: #a1513d;
+    font-size: 20px;
 }
 /* estilos del nav*/
 .nav{
@@ -21,6 +26,7 @@ font-family: 'Montserrat Alternates', sans-serif;
     z-index: 70;
     width: 100%;
    padding: 10px;
+   background-color: rgba(255, 255, 255, 0.849);
 }
 .nav-car,
 .nav-search {
@@ -36,7 +42,7 @@ display: flex;
   margin-right: 5px;
   color: #92695D; 
   font-size: large;
-  font-weight: 600;
+  
 }
 .seach-input{
     border: none;
@@ -57,6 +63,16 @@ display: flex;
     background-position: center;
 }
 .initial{
-    background-image: url("https://images.pexels.com/photos/7319189/pexels-photo-7319189.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load");
+    background-image: url("https://images.unsplash.com/photo-1568205612837-017257d2310a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1780&q=80");
     
+}
+.section-aboutme{
+    float: left;
+    width: 30%;
+    padding: 20px; 
+    height: 100%;
+    text-align: justify;
+    box-sizing: border-box;
+  
+  
 }

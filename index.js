@@ -3,10 +3,10 @@ var myFullpage = new fullpage('#fullpage', {
 	// Navigation
 	menu: '#menu',
 	lockAnchors: true,
-	anchors:['Papeleria', 'Marcaores','pinturas'],
+	anchors:['inicio', 'papeleria','arte'],
 	navigation: true,
 	navigationPosition: 'right',
-	navigationTooltips: ['Papeleria ', 'Marcaores','pinturas'],
+	navigationTooltips: ['inicio', 'papeleria','arte'],
 	showActiveTooltip: true,
 	slidesNavigation: true,
 	slidesNavPosition: 'bottom',
