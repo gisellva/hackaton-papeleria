@@ -1,0 +1,62 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Comfortaa', cursive;
+font-family: 'Fira Sans Condensed', sans-serif;
+font-family: 'Montserrat Alternates', sans-serif;
+}
+/* estilos del nav lateral*/
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+   
+    background:white;
+   
+}
+/* estilos del nav*/
+.nav{
+    position: fixed;
+    display: flex;
+   justify-content: flex-end;
+    z-index: 70;
+    width: 100%;
+   padding: 10px;
+}
+.nav-car,
+.nav-search {
+  margin-left: 120px; 
+  margin-right: 40px;
+}
+.nav-car{
+display: flex;
+
+}
+.nav-car p,
+.nav-search input {
+  margin-right: 5px;
+  color: #92695D; 
+  font-size: large;
+  font-weight: 600;
+}
+.seach-input{
+    border: none;
+    width: 400px;
+    height: 30px;
+    border-radius: 10px;
+    background: rgba(235, 231, 231, 0.355);
+    
+}
+
+.seach-input::placeholder{
+    color: #92695D;
+    text-align: center;
+}
+/* estilos del  las secciones del main*/
+.section{
+    background-size: cover;
+    background-position: center;
+}
+.initial{
+    background-image: url("https://images.pexels.com/photos/7319189/pexels-photo-7319189.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load");
+    
+}
