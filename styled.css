@@ -185,3 +185,11 @@ display: flex;
   flex-direction: row;
   align-items: center;
 }
+.cont-cart{
+ background: #7c5346;
+color:white;
+border-radius:50%;
+width:20px;
+text-align: center
+;
+}
