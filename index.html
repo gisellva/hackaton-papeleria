@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,61 +12,51 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Fira+Sans+Condensed:ital,wght@0,100;0,200;1,100;1,200&family=Montserrat+Alternates:ital,wght@0,100;0,300;0,800;1,500;1,600&display=swap"
-        rel="stylesheet">
-        
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Fira+Sans+Condensed:ital,wght@0,100;0,200;1,100;1,200&family=Montserrat+Alternates:ital,wght@0,100;0,300;0,800;1,500;1,600&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
     <nav class="nav">
+        <div class="logo">
+            <img src="./img/Logo Papeleria.svg" alt="seacrh" width="25px">
+        </div>
         <div class="nav-search">
             <input type="text" placeholder="busca tu producto" class="seach-input">
             <img src="./img/8.svg" alt="seacrh" width="25px">
         </div>
         <div class="nav-car">
            
-            <img src="./img/7.svg" alt="car" width="25px">
+            <img src="./img/7.svg" alt="car" width="35px" onclick="showCardResume()">
+            <div class="resume-card">
+           
+            </div>
         </div>
     </nav>
 
     <main id="fullpage">
         <div class="section initial ">
             <div class="section-aboutme">
-                <img src="./img/Logo Papeleria.svg" width="400px" >
-                <p >
-                    Descubre un mundo de creatividad y organización en nuestro ecommerce de papelería: Donde cada página en
-                    blanco es el inicio de una nueva aventura. Encuentra los instrumentos perfectos para plasmar tus ideas,
-                    hacer que tus proyectos cobren vida y tu trabajo sea más eficiente. ¡Haz que cada palabra cuente con
-                    nuestra selección de papelería de primera calidad y da forma a tus sueños, uno lápiz a la ve
-                </p>
+                <img src="./img/Logo Papeleria.svg" width="400px">
+                <h4>En cada página encontrarás el inicio de una nueva aventura. </h4>
+                <h5>Haz que cada palabra cuente con nuestra selección de papelería de primera calidad y da forma a tus ideas.</h5>
             </div>
-           
         </div>
         <div class="section half">
             <div class="secion-text">
-                <h1 ">Papeleria</h1>
-                <p>nuestro catalogo de productos de papeleria</p>
+                <h1>Papelería</h1>
+                <p>Explora nuestro catálogo de productos de papelería de alta calidad. Descubre una amplia variedad de artículos, desde papel y cuadernos hasta material de escritura y suministros creativos. Encontrarás todo lo que necesitas para tus proyectos, estudios o trabajo en nuestra selección cuidadosamente curada.</p>
             </div>
             <div class="cards"></div>
-            </div>
-       
-        </div> 
-
+        </div>       
         <div class="section  last">
             <div class="secion-text">
-                <h1 ">Arte</h1>
-                <p>nuestro catalogo de arte</p>
+                <h1>Arte</h1>
+                <p>Sumérgete en el mundo del arte y descubre todo lo que necesitas para expresarte a través de diferentes medios y técnicas. Desde pinturas y lienzos hasta herramientas de dibujo y escultura, estamos aquí para ayudarte a llevar tus proyectos artísticos al siguiente nivel.</p>
             </div>
             <div class="cards-Pintura"></div>
-            </div>
         </div>
-
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.js"></script>
     <script src="./index.js"></script>
 </body>
-
 </html>
