@@ -89,32 +89,32 @@ const myFullpage = new fullpage('#fullpage', {
 //array de los productos de la seccion productos de papeleria
 const productos = [
 	{
+		id:1,
 		img: "https://acdn.mitiendanube.com/stores/002/250/387/products/d_nq_np_946505-mco48286939822_112021-o1-dc3bddaf9b51a90ae316607747469496-640-0.jpg",
 		title: "Cartulina",
 		description: "lorem ipsum lorem ipsum loren ipsum"
 	}
 	,
 	{
+		id:2,
 		img: "https://panamericana.vtexassets.com/arquivos/ids/417378/colores-prismacolor-x-24-unidades-70530014860.jpg?v=637729599795300000",
 		title: "Colores",
 		description: "lorem ipsum lorem ipsum loren ipsum"
 	}
 	,
 	{
+		id:3,
 		img: "https://acdn.mitiendanube.com/stores/399/204/products/841-c5c78c743417d7ebd716343038558699-640-0.png",
 		title: "Taja Lapiz",
 		description: "lorem ipsum lorem ipsum loren ipsum"
 	}
 	, {
+		id:4,
 		img: "https://static.wixstatic.com/media/18f543_61749c8ba9764e69807c9ed99c59f6d1~mv2.jpg/v1/fill/w_980,h_980,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/18f543_61749c8ba9764e69807c9ed99c59f6d1~mv2.jpg",
 		title: "Borrador",
 		description: "lorem ipsum lorem ipsum loren ipsum"
 	}
-	, {
-		img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmNPqH_GxcFACrA09kuuQ6CV0ARxxqAYOQog&usqp=CAU",
-		title: "Borrador",
-		description: "lorem ipsum lorem ipsum loren ipsum"
-	}
+	
 
 ]
 //logica para crear las cartas de la seccion de productos de papeleria
@@ -124,7 +124,7 @@ productos.forEach(producto => {
 		const nuevoDiv = document.createElement("div");
 		nuevoDiv.className = 'card';
 		nuevoDiv.style.width = "16rem";
-
+		
 
 		const img = document.createElement("img");
 		img.className = "card-img-top";
@@ -145,13 +145,14 @@ productos.forEach(producto => {
 		containerbutton.className = "containerbutton"
 
 		const button1 = document.createElement('a')
-		button1.className = "btn btn-primary"
+		button1.className = "btn add"
 		button1.textContent = "agregar"
 		button1.style.color = "white";
-		button1.setAttribute('onclick', 'addCart()');
+		button1.addEventListener('click', () => addCart(producto));
+	
 
 		const button2 = document.createElement('a')
-		button2.className = "btn btn-primary"
+		button2.className = "btn delete"
 		button2.textContent = "eliminar"
 		button2.style.color = "white";
 		button2.setAttribute('onclick', 'deleteCart()');
@@ -171,6 +172,7 @@ productos.forEach(producto => {
 //array de los productos de la seccion productos de arte
 const productospintura = [
 	{
+		id:5,
 		img: "https://http2.mlstatic.com/D_NQ_NP_899518-MCO40819857965_022020-O.webp",
 		title: "Kit Vinilos",
 		description: "lorem ipsum lorem ipsum loren ipsum",
@@ -178,6 +180,7 @@ const productospintura = [
 	}
 	,
 	{
+		id:6,
 		img: "https://bricolaje.co/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOUxvQnc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e700edb5b9ed723749da954577a07d88fd491805/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RW5KbGMybDZaVjkwYjE5bWFYUmJCMmtDSUFOcEFpQUQiLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--70dc4abb6ac52505d9b5c972f6eb61cd265c8cf9/332532124_744708503642595_4489651278333940899_n.jpg?locale=es",
 		title: "Kit Pinceles",
 		description: "lorem ipsum lorem ipsum loren ipsum",
@@ -185,12 +188,14 @@ const productospintura = [
 	}
 	,
 	{
+		id:7,
 		img: "https://http2.mlstatic.com/D_NQ_NP_865524-MCO69606078856_052023-O.webp",
 		title: "Lienzos",
 		description: "lorem ipsum lorem ipsum loren ipsum",
         
 	}
 	, {
+		id:8,
 		img: "https://panamericana.vtexassets.com/arquivos/ids/269469/caballete-tripode-tipo-cajon-de-140-cm-512424.jpg?v=636386530451270000",
 		title: "Caballetes",
 		description: "lorem ipsum lorem ipsum loren ipsum",
@@ -198,6 +203,7 @@ const productospintura = [
 
 	}
 	, {
+		id:9,
 		img: "https://jberlyart.com/tienda/wp-content/uploads/maniqui-de-dibujo-30-cm.jpg",
 		title: "Maniqui",
 		description: "lorem ipsum lorem ipsum loren ipsum",
@@ -233,17 +239,18 @@ productospintura.forEach(producto => {
 		containerbutton.className = "containerbutton"
 
 		const button1 = document.createElement('a')
-		button1.className = "btn  "
+		button1.className = "btn add"
 		button1.textContent = "agregar"
 		button1.style.color = "white";
 		button1.setAttribute('onclick', 'addCart()');
 		
 
 		const button2 = document.createElement('a')
-		button2.className = "btn "
+		button2.className = "btn delete"
 		button2.textContent = "eliminar"
 		button2.style.color = "white";
 		button2.setAttribute('onclick', 'deleteCart()');
+		
 
 		cards.appendChild(nuevoDiv);
 		nuevoDiv.appendChild(img);
@@ -275,15 +282,22 @@ actualizarContador();
 cart.appendChild(paragraph);
 
 //funcion para aumentar la cantidad de productos en el numero del carrito
-function addCart() {
-    carrito.push(".");
-    actualizarContador(); 
+
+function addCart(producto) {
+	const nuevoProducto = {
+        title: producto.title,
+        
+    };
+	carrito.push(nuevoProducto)
+	actualizarContador()
+	alert(`agregaste el producto: ${nuevoProducto.title} a tu carrito de compras`)
 }
 
 
 //funcion para eliminar los productos
  function deleteCart(){
-	carrito.pop();
+	carrito.pop()
+    
     actualizarContador(); 
  }
  
