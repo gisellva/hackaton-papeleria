@@ -1,3 +1,4 @@
+//codigo de fullpage js
 const myFullpage = new fullpage('#fullpage', {
 	// Navigation
 	menu: '#menu',
@@ -85,7 +86,7 @@ const myFullpage = new fullpage('#fullpage', {
 	onSlideLeave: function (section, origin, destination, direction, trigger) { },
 	onScrollOverflow: function (section, slide, position, direction) { }
 });
-
+//array de los productos de la seccion productos de papeleria
 const productos = [
 	{
 		img: "https://acdn.mitiendanube.com/stores/002/250/387/products/d_nq_np_946505-mco48286939822_112021-o1-dc3bddaf9b51a90ae316607747469496-640-0.jpg",
@@ -116,6 +117,7 @@ const productos = [
 	}
 
 ]
+//logica para crear las cartas de la seccion de productos de papeleria
 productos.forEach(producto => {
 	document.addEventListener("DOMContentLoaded", function () {
 		const cards = document.getElementsByClassName("cards")[0];
@@ -166,7 +168,7 @@ productos.forEach(producto => {
 	});
 });
 
-
+//array de los productos de la seccion productos de arte
 const productospintura = [
 	{
 		img: "https://http2.mlstatic.com/D_NQ_NP_899518-MCO40819857965_022020-O.webp",
@@ -203,6 +205,7 @@ const productospintura = [
 	}
 
 ]
+//logica para crear las cartas de la seccion de productos de arte
 productospintura.forEach(producto => {
 	document.addEventListener("DOMContentLoaded", function () {
 		const cards = document.getElementsByClassName("cards-Pintura")[0];
@@ -253,9 +256,8 @@ productospintura.forEach(producto => {
 
 	});
 });
-
+//logica del carito
 const carrito = [];
-const prince=0
 
 const cart = document.querySelector(".nav-car");
 const paragraph = document.createElement('p');
@@ -264,7 +266,7 @@ paragraph.style.color = "white"
 
 
 
-
+//funcion para actualizar el contador de los productos
 function actualizarContador() {
     paragraph.textContent = carrito.length;
 }
@@ -272,15 +274,16 @@ function actualizarContador() {
 actualizarContador();
 cart.appendChild(paragraph);
 
+//funcion para aumentar la cantidad de productos en el numero del carrito
 function addCart() {
-    carrito.push("1");
+    carrito.push(".");
     actualizarContador(); 
 }
 
 
-
+//funcion para eliminar los productos
  function deleteCart(){
 	carrito.pop();
     actualizarContador(); 
  }
- console.log(carrito)
+ 
