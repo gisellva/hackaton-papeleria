@@ -1,7 +1,7 @@
 ### Landing Page de Papelería ✏️📚
 Este repositorio contiene el código fuente de una landing page para una papelería creada durante una hackatón en el curso de Generación. El proyecto está construido utilizando HTML, CSS y JavaScript, y se enfoca en proporcionar una interfaz atractiva y sencilla para presentar los servicios y productos de una papelería.
 
-#### Tabla de Contenidos
+### Tabla de Contenidos
 Descripción
 Tecnologías Utilizadas
 Instalación
